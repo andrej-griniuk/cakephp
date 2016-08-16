@@ -520,7 +520,7 @@ class I18nTest extends TestCase
         I18n::config('_fallback', function ($name) {
             $package = new Package('default');
 
-            if ($name == 'custom') {
+            if ($name === 'custom') {
                 $package->setMessages([
                     'Cow' => 'Le Moo custom',
                 ]);
